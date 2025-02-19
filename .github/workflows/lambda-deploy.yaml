@@ -4,9 +4,6 @@ name: Deploy AWS Lambda
 on:
   push:
     branches: [ main ]
-  
-  paths:
-    - 'lambda/**'
       
 jobs:
   deploy: # <-- Name of the job
