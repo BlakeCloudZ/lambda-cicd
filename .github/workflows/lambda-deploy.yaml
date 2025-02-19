@@ -6,8 +6,9 @@ on:
     branches: [ main ]
       
 jobs:
-  deploy: # <-- Name of the job
+  deploy-lambda: # <-- Name of the job
     runs-on: ubuntu-latest # Specifies the runner / virtual machine to execute the job
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -37,6 +38,6 @@ jobs:
         run: |
           cd lambda
           zip -r lambda.zip .
-          aws lambda update-fucntion-code \
+          aws lambda update-function-code \
           --function-name bz-test-cicd-lambda \
           --zip-file fileb://lambda.zip
