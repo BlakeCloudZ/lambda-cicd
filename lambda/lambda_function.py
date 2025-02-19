@@ -3,5 +3,5 @@ import json
 def lambda_handler(event, context):
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello! Friendly greeting from the CICD GitHub Actions workflow in VSCode')
+        'body': json.dumps('Hi! Friendly greeting from the CICD GitHub Actions workflow in VSCode')
     }
