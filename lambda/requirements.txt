@@ -1,0 +1,7 @@
+# This file is empty
+
+# Why create this requirements.txt if it's empty?
+
+# Even with a simple function that doesn't use any external dependencies, it's best practice always 
+# include a requirements.txt file. In more complex projects, the file would list the Python packages
+# required by the Lambda function.
