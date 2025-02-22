@@ -21,9 +21,9 @@ Resources:
         - Key: Environment
           Value: GitHubActionsTesting
 
-  Outputs:
-    BucketName:
-      Description: 'Name of the created S3 Bucket'
-      Value: !Ref BlakeS3Bucket
+Outputs:
+  BucketName:
+    Description: 'Name of the created S3 Bucket'
+    Value: !Ref BlakeS3Bucket
 
     
