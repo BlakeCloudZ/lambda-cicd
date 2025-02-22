@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'S3 Bucket for the CI/CD Pull Request'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: test
+    AllowedValues:
+      - test
+      - staging
+      - production
+
+Resources:
+  BlakeS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
+    Tags:
+      - Key: Environment
+        Value: !Ref Environment
+
+  Outputs:
+    BucketName:
+      Description: 'Name of the created S3 Bucket'
+      Value: !Ref BlakeS3Bucket
+
+    
